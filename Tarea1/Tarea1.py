@@ -1,6 +1,7 @@
 #****************** FUNCION *************************
 def numero_perfecto(N):
     suma=0
+    #lista=list(range(0,N))
     for i in range(1,N+1):
         cont=0
         for j in range(1,i):
@@ -9,9 +10,8 @@ def numero_perfecto(N):
                 cont=cont+j
             suma=cont
         if suma==i:
-            print("El numero "+str(i)+ " es perfecto")
+            print("\n***El numero: "+str(i)+ " es perfecto")
 #****************************************************
-
 print('''
 ---------------------------------------------------------------------
 ***Bienvenidos al programa que determina si un numero es perfecto***
@@ -22,9 +22,6 @@ Carnet: 201700722
 
 print("\n")
 numero=int(input("Ingrese un numero entero: "))
-lista=list(range(0,numero))
-print("\n\n")
-print("EL numero ingresado es: "+ str(numero))
-print("\n\n")
+print("\nEL numero ingresado es: "+ str(numero))
 
 numero_perfecto(numero)
