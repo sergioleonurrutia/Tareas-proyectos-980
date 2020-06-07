@@ -1,12 +1,4 @@
-def divisores(N):
-    lista=list(range(1,N))
-    suma=0
-    for i in lista:
-        modulo=N%i
-        if modulo ==0:
-            suma=suma+i
-    return suma
-#*****************************************************************+
+import eDP as DivisorPropio
 
 cont=2
 bandera=0
@@ -15,11 +7,8 @@ temp2=0
 numero= int(input("Ingrese un numero entero: "))
 
 while bandera<numero:
-    amigo1=divisores(cont)
-    #print("Respuesta del primer numero: " +str(amigo1))
-    amigo2=divisores(amigo1)
-    #print("Respuesta del segundo numero: " + str(amigo2))
-    #print("Contador: "+str(cont))
+    amigo1=DivisorPropio.divisores(cont)
+    amigo2=DivisorPropio.divisores(amigo1)
     
     if amigo1==amigo2:
         cont=cont+1
